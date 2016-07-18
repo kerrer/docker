@@ -1,0 +1,3 @@
+[submodule "nginx/php-fpm"]
+	path = nginx/php-fpm
+	url = https://github.com/ngineered/nginx-php-fpm.git
