@@ -4,3 +4,12 @@
 [submodule "nginx/lemp-mysql"]
 	path = nginx/lemp-mysql
 	url = https://github.com/TeckniX/docker-nginx-laravel.git
+[submodule "red5"]
+	path = red5
+	url = https://github.com/Red5/docker.git
+[submodule "phpvirtualbox"]
+	path = phpvirtualbox
+	url = https://github.com/imoore76/phpvirtualbox.git
+[submodule "odoo/odoo"]
+	path = odoo/odoo
+	url = https://github.com/odoo/docker.git
