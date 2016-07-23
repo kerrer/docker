@@ -13,3 +13,12 @@
 [submodule "odoo/odoo"]
 	path = odoo/odoo
 	url = https://github.com/odoo/docker.git
+[submodule "nginx/php-dockerized"]
+	path = nginx/php-dockerized
+	url = https://github.com/kasperisager/php-dockerized.git
+[submodule "webdevops"]
+	path = webdevops
+	url = https://github.com/webdevops/Dockerfile.git
+[submodule "apache/phpfarm"]
+	path = apache/phpfarm
+	url = https://github.com/splitbrain/docker-phpfarm.git
