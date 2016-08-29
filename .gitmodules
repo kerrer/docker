@@ -22,3 +22,15 @@
 [submodule "apache/phpfarm"]
 	path = apache/phpfarm
 	url = https://github.com/splitbrain/docker-phpfarm.git
+[submodule "nexus"]
+	path = nexus
+	url = https://github.com/sonatype/docker-nexus.git
+[submodule "b2b2c/virtuemart"]
+	path = b2b2c/virtuemart
+	url = https://github.com/open-tools/docker-virtuemart.git
+[submodule "b2b2c/drupal"]
+	path = b2b2c/drupal
+	url = https://github.com/wadmiraal/docker-drupal.git
+[submodule "erp/adempiere"]
+	path = erp/adempiere
+	url = https://github.com/adempiere/adempiereDocker.git
