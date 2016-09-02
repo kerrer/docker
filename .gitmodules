@@ -34,3 +34,15 @@
 [submodule "erp/adempiere"]
 	path = erp/adempiere
 	url = https://github.com/adempiere/adempiereDocker.git
+[submodule "zookeeper/docker-zookeeper"]
+	path = zookeeper/docker-zookeeper
+	url = https://github.com/jplock/docker-zookeeper.git
+[submodule "zookeeper/cluster"]
+	path = zookeeper/cluster
+	url = https://github.com/lukeolbrish/examples.git
+[submodule "log/elk"]
+	path = log/elk
+	url = https://github.com/northshorenetworks/elk.git
+[submodule "log/elk2"]
+	path = log/elk2
+	url = https://github.com/northshorenetworks/docker-elk-pfSense.git
