@@ -1,0 +1,24 @@
+nginx:
+  image: million12/nginx-php
+  ports:
+    - "8000:80"
+  links:
+    - postgres
+  volumes_from:
+    - busybox
+  environment: 
+    NGINX_GENERATE_DEFAULT_VHOST: 'true'
+
+busybox:
+  image: busybox
+  volumes: 
+    - /work/ERP/nginx/data:/data
+    - /work/ERP/postgres/data:/postgres/data
+  
+postgres:
+  image: postgres:9.5
+  environment:
+    POSTGRES_PASSWORD: mmmm
+    PGDATA: /postgres/data
+  volumes_from:
+    - busybox

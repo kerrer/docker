@@ -1,0 +1,23 @@
+puppet:
+  build: .
+  ports:
+    - "8140:8140"
+  hostname: puppet
+  links:
+    - postgres:db
+  environment: 
+    NGINX_GENERATE_DEFAULT_VHOST: 'true'
+
+busybox:
+  image: busybox
+  volumes: 
+    - ./postgres/data:/postgres/data
+  
+postgres:
+  image: postgres:9.5
+  environment:
+    POSTGRES_PASSWORD: mmmm
+    PGDATA: /postgres/data
+    POSTGRES_DB: puppetdb
+  volumes_from:
+    - busybox
