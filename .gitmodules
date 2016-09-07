@@ -46,3 +46,9 @@
 [submodule "log/elk2"]
 	path = log/elk2
 	url = https://github.com/northshorenetworks/docker-elk-pfSense.git
+[submodule "nginx/docker-lemp"]
+	path = nginx/docker-lemp
+	url = https://github.com/stenote/docker-lemp.git
+[submodule "nginx/lemp"]
+	path = nginx/lemp
+	url = https://bitbucket.org/linuxconfig/lemp.git
