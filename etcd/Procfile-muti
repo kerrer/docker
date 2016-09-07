@@ -1,0 +1,26 @@
+#备份机 192.168.8.158 12379  12380
+
+etcd1: /work/lang/etcd/bin/etcd -name infra1 -listen-client-urls http://192.168.8.158:12379 -advertise-client-urls http://192.168.8.158:12379 -listen-peer-urls http://192.168.8.158:12380 -initial-advertise-peer-urls http://192.168.8.158:12380 -initial-cluster-token etcd-cluster-1 -initial-cluster 'infra1=http://192.168.8.158:12380,infra2=http://192.168.8.158:22380,infra3=http://192.168.8.158:32380,infra4=http://192.168.8.158:42380' -initial-cluster-state new
+
+#######################################################################################################
+#host1 127.0.0.1:22379  192.168.8.158:22380
+#proxy1 127.0.0.1:4001
+
+etcd2: /work/lang/etcd/bin/etcd -name infra2 -listen-client-urls http://127.0.0.1:22379 -advertise-client-urls http://127.0.0.1:22379 -listen-peer-urls http://192.168.8.158:22380 -initial-advertise-peer-urls http://192.168.8.158:22380 -initial-cluster-token etcd-cluster-1 -initial-cluster 'infra1=http://192.168.8.158:12380,infra2=http://192.168.8.158:22380,infra3=http://192.168.8.158:32380,infra4=http://192.168.8.158:42380' -initial-cluster-state new
+
+#######################################################################################################
+#host2 127.0.0.1:32379  192.168.8.158:32380
+#proxy2 127.0.0.1:4002
+
+etcd3: /work/lang/etcd/bin/etcd -name infra3 -listen-client-urls http://127.0.0.1:32379 -advertise-client-urls http://127.0.0.1:32379 -listen-peer-urls http://192.168.8.158:32380 -initial-advertise-peer-urls http://192.168.8.158:32380 -initial-cluster-token etcd-cluster-1 -initial-cluster 'infra1=http://192.168.8.158:12380,infra2=http://192.168.8.158:22380,infra3=http://192.168.8.158:32380,infra4=http://192.168.8.158:42380' -initial-cluster-state new
+
+#######################################################################################################
+#host3 127.0.0.1:22379  192.168.8.158:22380
+#proxy3 127.0.0.1:4003
+
+etcd4: /work/lang/etcd/bin/etcd -name infra4 -listen-client-urls http://127.0.0.1:42379 -advertise-client-urls http://127.0.0.1:42379 -listen-peer-urls http://192.168.8.158:42380 -initial-advertise-peer-urls http://192.168.8.158:42380 -initial-cluster-token etcd-cluster-1 -initial-cluster 'infra1=http://192.168.8.158:12380,infra2=http://192.168.8.158:22380,infra3=http://192.168.8.158:32380,infra4=http://192.168.8.158:42380' -initial-cluster-state new
+
+############################################################################################################################################
+proxy2: /work/lang/etcd/bin/etcd -name infra-proxy2 -proxy=on -listen-client-urls http://127.0.0.1:4001 -initial-cluster 'infra2=http://127.0.0.1:22380,infra1=http://192.168.8.158:12380'
+proxy3: /work/lang/etcd/bin/etcd -name infra-proxy3 -proxy=on -listen-client-urls http://127.0.0.1:4002 -initial-cluster 'infra3=http://127.0.0.1:32380,infra1=http://192.168.8.158:12380'
+proxy4: /work/lang/etcd/bin/etcd -name infra-proxy4 -proxy=on -listen-client-urls http://127.0.0.1:4003 -initial-cluster 'infra4=http://127.0.0.1:42380,infra1=http://192.168.8.158:12380'

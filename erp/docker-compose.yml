@@ -1,0 +1,20 @@
+python:
+  build: python
+  links:
+    - postgres
+  volumes:
+    - /work/ERP:/opt
+    
+busybox:
+  image: busybox
+  volumes: 
+    - /work/ERP/python/data:/data
+    - /work/ERP/postgres/data:/postgres/data
+  
+postgres:
+  image: postgres:9.5
+  environment:
+    POSTGRES_PASSWORD: mmmm
+    PGDATA: /postgres/data
+  volumes_from:
+    - busybox

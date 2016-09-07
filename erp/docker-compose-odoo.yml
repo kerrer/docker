@@ -1,0 +1,22 @@
+odoo:
+  image: odoo
+  links:
+    - postgres:db
+  ports:
+    - "8069:8069"
+    
+busybox:
+  image: busybox
+  volumes: 
+    - /work/ERP/python/data:/data
+    - /work/ERP/postgres/data:/postgres/data
+  
+postgres:
+  image: postgres:9.5
+  environment:
+    POSTGRES_USER: odoo
+    POSTGRES_PASSWORD: odoo
+    PGDATA: /postgres/data
+  volumes_from:
+    - busybox
+

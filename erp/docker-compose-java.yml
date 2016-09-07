@@ -1,0 +1,14 @@
+java7:
+  image: java:7
+  links:
+    - postgres
+  volumes:
+    - /work/ERP:/usr/src/myapp
+    
+postgres:
+  image: postgres:9.5
+  environment:
+    POSTGRES_PASSWORD: mmmm
+    PGDATA: /data
+  volumes: 
+    - /work/ERP/postgresql/data:/data
