@@ -1,0 +1,28 @@
+deb http://mirrors.sohu.com/ubuntu/ yakkety main restricted
+# deb-src http://mirrors.sohu.com/ubuntu/ yakkety main restricted
+
+deb http://mirrors.sohu.com/ubuntu/ yakkety-updates main restricted
+# deb-src http://mirrors.sohu.com/ubuntu/ yakkety-updates main restricted
+
+deb http://mirrors.sohu.com/ubuntu/ yakkety universe
+deb-src http://mirrors.sohu.com/ubuntu/ yakkety universe
+deb http://mirrors.sohu.com/ubuntu/ yakkety-updates universe
+deb-src http://mirrors.sohu.com/ubuntu/ yakkety-updates universe
+
+deb http://mirrors.sohu.com/ubuntu/ yakkety multiverse
+# deb-src http://mirrors.sohu.com/ubuntu/ yakkety multiverse
+deb http://mirrors.sohu.com/ubuntu/ yakkety-updates multiverse
+# deb-src http://mirrors.sohu.com/ubuntu/ yakkety-updates multiverse
+
+deb http://mirrors.sohu.com/ubuntu/ yakkety-backports main restricted universe multiverse
+# deb-src http://mirrors.sohu.com/ubuntu/ yakkety-backports main restricted universe multiverse
+
+# deb http://archive.canonical.com/ubuntu yakkety partner
+# deb-src http://archive.canonical.com/ubuntu yakkety partner
+
+deb http:///mirrors.sohu.com/ubuntu/ yakkety-security main restricted
+# deb-src http:///mirrors.sohu.com/ubuntu/ yakkety-security main restricted
+deb http:///mirrors.sohu.com/ubuntu/ yakkety-security universe
+deb-src http:///mirrors.sohu.com/ubuntu/ yakkety-security universe
+deb http:///mirrors.sohu.com/ubuntu/ yakkety-security multiverse
+# deb-src http:///mirrors.sohu.com/ubuntu/ yakkety-security multiverse

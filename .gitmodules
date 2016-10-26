@@ -49,3 +49,6 @@
 [submodule "nginx/docker-lemp"]
 	path = nginx/docker-lemp
 	url = https://github.com/stenote/docker-lemp.git
+[submodule "nginx/docker-wordpress-hhvm"]
+	path = nginx/docker-wordpress-hhvm
+	url = https://github.com/wmark/docker-wordpress-hhvm.git
