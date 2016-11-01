@@ -1,0 +1,14 @@
+
+module my-dockergen 1.0;
+
+require {
+	type container_runtime_t;
+	type svirt_lxc_net_t;
+	class unix_stream_socket connectto;
+}
+
+#============= svirt_lxc_net_t ==============
+
+#!!!! The file '/run/docker.sock' is mislabeled on your system.  
+#!!!! Fix with $ restorecon -R -v /run/docker.sock
+allow svirt_lxc_net_t container_runtime_t:unix_stream_socket connectto;
