@@ -52,3 +52,6 @@
 [submodule "nginx/docker-wordpress-hhvm"]
 	path = nginx/docker-wordpress-hhvm
 	url = https://github.com/wmark/docker-wordpress-hhvm.git
+[submodule "mysql/galera-cluster"]
+	path = mysql/galera-cluster
+	url = https://github.com/RvdGijp/mariadb-10.1-galera.git
